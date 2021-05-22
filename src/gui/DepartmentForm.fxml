@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="148.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="148.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DepartmentFormController">
    <children>
       <GridPane layoutX="85.0" layoutY="60.0" prefHeight="99.0" prefWidth="472.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
         <columnConstraints>
@@ -34,21 +34,21 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField editable="false" GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label textFill="#eb0b0b" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <TextField fx:id="txId" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="labelErrorName" textFill="#eb0b0b" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Button mnemonicParsing="false" text="Save" textFill="#0f5bf5">
+                  <Button fx:id="btSave" mnemonicParsing="false" onAction="#onBtSaveAction" text="Save" textFill="#0f5bf5">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" text="Cancel" textFill="#ee0606">
+                  <Button fx:id="btCancel" mnemonicParsing="false" onAction="#onBtCancelAction" text="Cancel" textFill="#ee0606">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
